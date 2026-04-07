@@ -256,6 +256,22 @@ h3 {
   gap: 3rem;
 }
 
+.about-photo-placeholder {
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 1px dashed rgba(78, 59, 42, 0.28);
+  background: linear-gradient(135deg, rgba(139,111,71,0.16), rgba(255,255,255,0.86));
+  color: var(--dark-brown);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  box-shadow: var(--shadow);
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
