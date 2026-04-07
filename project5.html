@@ -3,168 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Event Design</title>
+  <title>Open Air Kino</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-page="project5">
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">Portfolio</a>
       <nav>
-        <a href="index.html#projects">Zurück zu Projekten</a>
+        <a href="index.html#projects" data-i18n="nav.backProjects">Zurück zu Projekten</a>
+        <button type="button" class="lang-toggle" data-language-toggle aria-label="Switch language">EN</button>
       </nav>
     </div>
   </header>
 
-  <main class="case-study-page">
-    <!-- HERO -->
-    <section class="case-hero">
-      <div class="case-hero-overlay">
-        <div class="case-hero-text">
-          <p class="case-category">Webdesign & Entwicklung</p>
-          <h1>Projekt 1:<br>Portfolio Website</h1>
-          <p class="case-subtext">
-            Eine moderne, ruhige und professionelle Portfolio-Seite zur Präsentation
-            meiner Projekte und Fähigkeiten.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTRO -->
-    <section class="case-section case-intro">
-      <div class="case-description card-soft">
-        <h2>Projektbeschreibung</h2>
-        <p>
-          Für dieses Projekt habe ich eine minimalistische Portfolio-Website gestaltet
-          und umgesetzt. Das Ziel war, einen modernen und hochwertigen Auftritt zu schaffen,
-          der professionell wirkt und sich gut für Bewerbungen eignet.
-        </p>
-      </div>
-
-      <div class="case-facts">
-        <div class="fact-card">
-          <span class="fact-label">Tools</span>
-          <span class="fact-value">HTML, CSS, JavaScript</span>
-        </div>
-        <div class="fact-card">
-          <span class="fact-label">Dauer</span>
-          <span class="fact-value">2 Wochen</span>
-        </div>
-        <div class="fact-card fact-card-wide">
-          <span class="fact-label">Rolle</span>
-          <span class="fact-value">Design & Entwicklung</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEM / SOLUTION -->
-    <section class="case-section">
-      <div class="problem-solution-wrapper">
-        <div class="problem-box">
-          <h2>Problem</h2>
-          <div class="inner-box">
-            Die bisherige Darstellung war unübersichtlich und wirkte nicht modern genug.
+  <main class="project-page reveal">
+    <div class="project-shell">
+      <section class="project-hero">
+        <div class="project-intro">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Print / Branding</p>
+          <h1 data-i18n="hero.title">Open Air Kino</h1>
+          <p class="project-lead" data-i18n="hero.text">Ein visuelles Konzept für ein Event, das Informationen klar strukturiert und gleichzeitig eine starke, wiedererkennbare Gestaltung für verschiedene Printmedien schafft.</p>
+          <div class="project-tags">
+            <span data-i18n="tags.1">Print Layout</span>
+            <span data-i18n="tags.2">Event Branding</span>
+            <span data-i18n="tags.3">Informationsdesign</span>
           </div>
         </div>
-
-        <div class="solution-box">
-          <h2>Lösung</h2>
-          <div class="inner-box">
-            Entwicklung eines klaren Layouts mit ruhiger Farbwelt, guter Lesbarkeit und
-            einfacher Navigation.
+        <div class="project-hero-image">
+          <div class="project-visual-label">
+            <strong data-i18n="focus.label">Projektfokus</strong>
+            <span data-i18n="focus.text">Ein stimmiges Designsystem für Event-Kommunikation und Printmaterialien.</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PROCESS -->
-    <section class="case-section">
-      <div class="section-title-row">
-        <div class="line"></div>
-        <h2>Entwicklungsprozess</h2>
-        <div class="line"></div>
-      </div>
+      <ul class="project-facts">
+        <li><strong data-i18n="facts.roleLabel">Rolle</strong><span data-i18n="facts.roleValue">Gestaltung und Layoutsystem</span></li>
+        <li><strong data-i18n="facts.toolsLabel">Tools</strong>Illustrator, InDesign, Photoshop</li>
+        <li><strong data-i18n="facts.resultLabel">Ergebnis</strong><span data-i18n="facts.resultValue">Konsistentes Event-Material</span></li>
+      </ul>
 
-      <div class="process-grid">
-        <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="Wireframes und Skizzen">
-          <h3>Wireframes & Skizzen</h3>
+      <section class="project-details-grid">
+        <div class="project-section-card">
+          <h2 data-i18n="description.title">Projektbeschreibung</h2>
+          <p data-i18n="description.text">Für dieses Projekt wurde ein visuelles Konzept für ein Event entwickelt, das Information, Markenwirkung und eine klare Gestaltung miteinander verbindet. Wichtige Inhalte sollten schnell erfassbar sein und gleichzeitig einen professionellen Eindruck hinterlassen.</p>
         </div>
 
-        <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Designprozess">
-          <h3>Design in Figma</h3>
+        <div class="project-section-card">
+          <h2 data-i18n="tools.title">Tools</h2>
+          <ul>
+            <li>Illustrator</li>
+            <li>InDesign</li>
+            <li>Photoshop</li>
+          </ul>
         </div>
-
-        <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" alt="Coding und Umsetzung">
-          <h3>Coding & Umsetzung</h3>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESULT -->
-    <section class="case-section">
-      <div class="section-title-row">
-        <div class="line"></div>
-        <h2>Ergebnis</h2>
-        <div class="line"></div>
-      </div>
-
-      <p class="result-subtitle">Das fertige Portfolio</p>
-
-      <div class="result-image-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1400&q=80"
-          alt="Finales Portfolio Mockup"
-        >
-      </div>
-    </section>
-
-    <!-- REFLECTION -->
-    <section class="case-section reflection-section">
-      <div class="card-soft">
-        <h2>Reflexion</h2>
-        <p>
-          Bei diesem Projekt habe ich gelernt, wie wichtig ein klares Layout, eine
-          reduzierte Gestaltung und eine saubere Struktur für einen professionellen
-          Webauftritt sind. Besonders wichtig war für mich, dass das Design ruhig wirkt
-          und trotzdem modern und überzeugend bleibt.
-        </p>
-      </div>
-    </section>
+      </section>
 
       <section class="project-text-block project-section-card">
-        <h2>Meine Aufgaben</h2>
-        <p>
-          Gestaltung von Printmaterialien, Entwicklung eines konsistenten Layouts und Anpassung
-          der visuellen Elemente an das Eventkonzept.
-        </p>
+        <h2 data-i18n="tasks.title">Meine Aufgaben</h2>
+        <p data-i18n="tasks.text">Gestaltung von Printmaterialien, Entwicklung eines konsistenten Layouts und Anpassung der visuellen Elemente an das Eventkonzept.</p>
         <div class="project-phase-grid">
           <div class="project-phase">
-            <strong>Identität</strong>
-            Stil, Farben und grafische Leitidee definieren.
+            <strong data-i18n="phases.1.title">Identität</strong>
+            <span data-i18n="phases.1.text">Stil, Farben und grafische Leitidee definieren.</span>
           </div>
           <div class="project-phase">
-            <strong>Layouts</strong>
-            Poster, Flyer und Begleitmaterial gestalten.
+            <strong data-i18n="phases.2.title">Layouts</strong>
+            <span data-i18n="phases.2.text">Poster, Flyer und Begleitmaterial gestalten.</span>
           </div>
           <div class="project-phase">
-            <strong>Anwendung</strong>
-            Design auf verschiedene Medien übertragen.
+            <strong data-i18n="phases.3.title">Anwendung</strong>
+            <span data-i18n="phases.3.text">Design auf verschiedene Medien übertragen.</span>
           </div>
         </div>
       </section>
 
       <div class="project-next">
-        <p>Zurück zur Übersicht</p>
-        <a href="index.html#projects" class="btn btn-primary">Alle Projekte ansehen</a>
+        <p data-i18n="next.label">Zurück zur Übersicht</p>
+        <a href="index.html#projects" class="btn btn-primary" data-i18n="next.button">Alle Projekte ansehen</a>
       </div>
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -9,12 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-page="project1">
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">Portfolio</a>
       <nav>
-        <a href="index.html#projects">Zurück zu Projekten</a>
+        <a href="index.html#projects" data-i18n="nav.backProjects">Zurück zu Projekten</a>
+        <button type="button" class="lang-toggle" data-language-toggle aria-label="Switch language">EN</button>
       </nav>
     </div>
   </header>
@@ -23,38 +24,31 @@
     <section class="case-hero">
       <div class="case-hero-overlay">
         <div class="case-hero-text">
-          <p class="case-category">Webdesign & Entwicklung</p>
-          <h1>Projekt 1:<br>Portfolio Website</h1>
-          <p class="case-subtext">
-            Eine moderne, ruhige und professionelle Portfolio-Seite zur Präsentation
-            meiner Projekte und Fähigkeiten.
-          </p>
+          <p class="case-category" data-i18n="hero.category">Webdesign & Entwicklung</p>
+          <h1 data-i18n="hero.title">Projekt 1: Portfolio Website</h1>
+          <p class="case-subtext" data-i18n="hero.text">Eine moderne, ruhige und professionelle Portfolio-Seite zur Präsentation meiner Projekte und Fähigkeiten.</p>
         </div>
       </div>
     </section>
 
     <section class="case-section case-intro">
       <div class="case-description card-soft">
-        <h2>Projektbeschreibung</h2>
-        <p>
-          Für dieses Projekt habe ich eine minimalistische Portfolio-Website gestaltet
-          und umgesetzt. Das Ziel war, einen modernen und hochwertigen Auftritt zu schaffen,
-          der professionell wirkt und sich gut für Bewerbungen eignet.
-        </p>
+        <h2 data-i18n="intro.title">Projektbeschreibung</h2>
+        <p data-i18n="intro.text">Für dieses Projekt habe ich eine minimalistische Portfolio-Website gestaltet und umgesetzt. Das Ziel war, einen modernen und hochwertigen Auftritt zu schaffen, der professionell wirkt und sich gut für Bewerbungen eignet.</p>
       </div>
 
       <div class="case-facts">
         <div class="fact-card">
-          <span class="fact-label">Tools</span>
+          <span class="fact-label" data-i18n="facts.toolsLabel">Tools</span>
           <span class="fact-value">HTML, CSS, JavaScript</span>
         </div>
         <div class="fact-card">
-          <span class="fact-label">Dauer</span>
-          <span class="fact-value">2 Wochen</span>
+          <span class="fact-label" data-i18n="facts.durationLabel">Dauer</span>
+          <span class="fact-value" data-i18n="facts.durationValue">2 Wochen</span>
         </div>
         <div class="fact-card fact-card-wide">
-          <span class="fact-label">Rolle</span>
-          <span class="fact-value">Design & Entwicklung</span>
+          <span class="fact-label" data-i18n="facts.roleLabel">Rolle</span>
+          <span class="fact-value" data-i18n="facts.roleValue">Design & Entwicklung</span>
         </div>
       </div>
     </section>
@@ -62,18 +56,13 @@
     <section class="case-section">
       <div class="problem-solution-wrapper">
         <div class="problem-box">
-          <h2>Problem</h2>
-          <div class="inner-box">
-            Die bisherige Darstellung war unübersichtlich und wirkte nicht modern genug.
-          </div>
+          <h2 data-i18n="problem.title">Problem</h2>
+          <div class="inner-box" data-i18n="problem.text">Die bisherige Darstellung war unübersichtlich und wirkte nicht modern genug.</div>
         </div>
 
         <div class="solution-box">
-          <h2>Lösung</h2>
-          <div class="inner-box">
-            Entwicklung eines klaren Layouts mit ruhiger Farbwelt, guter Lesbarkeit und
-            einfacher Navigation.
-          </div>
+          <h2 data-i18n="solution.title">Lösung</h2>
+          <div class="inner-box" data-i18n="solution.text">Entwicklung eines klaren Layouts mit ruhiger Farbwelt, guter Lesbarkeit und einfacher Navigation.</div>
         </div>
       </div>
     </section>
@@ -81,24 +70,24 @@
     <section class="case-section">
       <div class="section-title-row">
         <div class="line"></div>
-        <h2>Entwicklungsprozess</h2>
+        <h2 data-i18n="process.title">Entwicklungsprozess</h2>
         <div class="line"></div>
       </div>
 
       <div class="process-grid">
         <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="Wireframes und Skizzen">
-          <h3>Wireframes & Skizzen</h3>
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="Wireframes und Skizzen" data-i18n-alt="process.alt1">
+          <h3 data-i18n="process.step1">Wireframes & Skizzen</h3>
         </div>
 
         <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Designprozess">
-          <h3>Design in Figma</h3>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Designprozess" data-i18n-alt="process.alt2">
+          <h3 data-i18n="process.step2">Design in Figma</h3>
         </div>
 
         <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" alt="Coding und Umsetzung">
-          <h3>Coding & Umsetzung</h3>
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" alt="Coding und Umsetzung" data-i18n-alt="process.alt3">
+          <h3 data-i18n="process.step3">Coding & Umsetzung</h3>
         </div>
       </div>
     </section>
@@ -106,36 +95,30 @@
     <section class="case-section">
       <div class="section-title-row">
         <div class="line"></div>
-        <h2>Ergebnis</h2>
+        <h2 data-i18n="result.title">Ergebnis</h2>
         <div class="line"></div>
       </div>
 
-      <p class="result-subtitle">Das fertige Portfolio</p>
+      <p class="result-subtitle" data-i18n="result.subtitle">Das fertige Portfolio</p>
 
       <div class="result-image-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1400&q=80"
-          alt="Finales Portfolio Mockup"
-        >
+        <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1400&q=80" alt="Finales Portfolio Mockup" data-i18n-alt="result.alt">
       </div>
     </section>
 
     <section class="case-section reflection-section">
       <div class="card-soft">
-        <h2>Reflexion</h2>
-        <p>
-          Bei diesem Projekt habe ich gelernt, wie wichtig ein klares Layout, eine
-          reduzierte Gestaltung und eine saubere Struktur für einen professionellen
-          Webauftritt sind. Besonders wichtig war für mich, dass das Design ruhig wirkt
-          und trotzdem modern und überzeugend bleibt.
-        </p>
+        <h2 data-i18n="reflection.title">Reflexion</h2>
+        <p data-i18n="reflection.text">Bei diesem Projekt habe ich gelernt, wie wichtig ein klares Layout, eine reduzierte Gestaltung und eine saubere Struktur für einen professionellen Webauftritt sind. Besonders wichtig war für mich, dass das Design ruhig wirkt und trotzdem modern und überzeugend bleibt.</p>
       </div>
     </section>
 
     <div class="project-next">
-      <p>Nächstes Projekt ansehen</p>
-      <a href="projekt2.html" class="btn btn-primary">Weiter zu Projekt 2</a>
+      <p data-i18n="next.label">Nächstes Projekt ansehen</p>
+      <a href="projekt2.html" class="btn btn-primary" data-i18n="next.button">Weiter zu Projekt 2</a>
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -9,39 +9,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="project3">
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">Portfolio</a>
       <nav>
-        <a href="index.html#projects">Zurück zu Projekten</a>
+        <a href="index.html#projects" data-i18n="nav.backProjects">Zurück zu Projekten</a>
+        <button type="button" class="lang-toggle" data-language-toggle aria-label="Switch language">EN</button>
       </nav>
     </div>
   </header>
 
   <main class="gallery-page">
     <section class="gallery-header">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Illustration</h1>
-      <p>Eine Auswahl meiner kreativen Illustrationen und visuellen Arbeiten.</p>
+      <p class="eyebrow" data-i18n="header.eyebrow">Portfolio</p>
+      <h1 data-i18n="header.title">Illustration</h1>
+      <p data-i18n="header.text">Eine Auswahl meiner kreativen Illustrationen und visuellen Arbeiten.</p>
     </section>
 
     <section class="gallery-grid">
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=900&q=80" alt="Digitale Illustration">
-        <div class="overlay"><span>Digital Art</span></div>
+        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=900&q=80" alt="Digitale Illustration" data-i18n-alt="gallery.1.alt">
+        <div class="overlay"><span data-i18n="gallery.1.label">Digital Art</span></div>
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=80" alt="Skizze und Konzeptarbeit">
-        <div class="overlay"><span>Sketch</span></div>
+        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=80" alt="Skizze und Konzeptarbeit" data-i18n-alt="gallery.2.alt">
+        <div class="overlay"><span data-i18n="gallery.2.label">Sketch</span></div>
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1535909339361-9b7e3c33b0f9?auto=format&fit=crop&w=900&q=80" alt="Charakterdesign Illustration">
-        <div class="overlay"><span>Character</span></div>
+        <img src="https://images.unsplash.com/photo-1535909339361-9b7e3c33b0f9?auto=format&fit=crop&w=900&q=80" alt="Charakterdesign Illustration" data-i18n-alt="gallery.3.alt">
+        <div class="overlay"><span data-i18n="gallery.3.label">Character</span></div>
       </div>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
