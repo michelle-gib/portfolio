@@ -154,6 +154,12 @@
     <p data-i18n="footer.text">© 2026 Portfolio - Mediamatikerin in Ausbildung</p>
   </footer>
 
+  <script>
+    // Prüfe Login-Status
+    if (localStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
