@@ -39,7 +39,7 @@ const translations = {
       "nav.about": "Über mich",
       "nav.contact": "Kontakt",
       "home.eyebrow": "Mediamatikerin in Ausbildung",
-      "home.subtitle": "Ich gestalte moderne, visuell klare digitale Lösungen mit Fokus auf Webdesign, Gestaltung und Benutzerfreundlichkeit.",
+      "home.subtitle": "3. Lehrjahr",
       "home.text": "Mein Fokus liegt auf der Gestaltung und Umsetzung von digitalen Projekten mit einem klaren Erscheinungsbild. Dabei verbinde ich Design, Analyse und Technik zu durchdachten Lösungen, die sowohl visuell als auch funktional überzeugen.",
       "home.ctaWork": "Arbeiten ansehen",
       "home.ctaContact": "Kontakt",
