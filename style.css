@@ -532,6 +532,150 @@ h3 {
   white-space: nowrap;
 }
 
+.project-showcase {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-hero-poster img {
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.open-air-results {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.open-air-feature-card,
+.open-air-media-card {
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(78, 59, 42, 0.10);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(78, 59, 42, 0.06);
+}
+
+.open-air-feature-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.open-air-poster-card {
+  grid-template-columns: 1fr;
+}
+
+.open-air-feature-image,
+.open-air-media-image {
+  background:
+    radial-gradient(circle at top left, rgba(139,111,71,0.18), transparent 42%),
+    linear-gradient(135deg, rgba(139,111,71,0.12), rgba(255,255,255,0.95));
+  padding: 1.5rem;
+}
+
+.open-air-feature-image img,
+.open-air-media-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 1.2rem;
+}
+
+.poster-format {
+  min-height: 520px;
+}
+
+.open-air-poster-card {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.96), rgba(242, 234, 223, 0.92));
+}
+
+.open-air-poster-card .open-air-feature-image {
+  padding: 0.85rem;
+}
+
+.poster-stage {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  padding: 0.65rem;
+  border-radius: 1.6rem;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.95), rgba(255,255,255,0.2) 45%, transparent 72%),
+    linear-gradient(180deg, rgba(78, 59, 42, 0.08), rgba(139,111,71,0.18));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster-stage::before {
+  content: "";
+  position: absolute;
+  inset: 6% 12%;
+  border-radius: 1.4rem;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.72), rgba(255,255,255,0));
+  filter: blur(18px);
+}
+
+.poster-stage img {
+  position: relative;
+  z-index: 1;
+  width: auto;
+  max-width: 100%;
+  max-height: 620px;
+  box-shadow:
+    0 28px 60px rgba(78, 59, 42, 0.18),
+    0 8px 18px rgba(78, 59, 42, 0.10);
+  border-radius: 1.1rem;
+  border: 6px solid rgba(255,255,255,0.92);
+  background: #fff;
+}
+
+.poster-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(78, 59, 42, 0.88);
+  color: var(--white);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.flyer-format {
+  min-height: 280px;
+}
+
+.open-air-feature-copy,
+.open-air-media-copy {
+  padding: 1.75rem;
+}
+
+.open-air-poster-card .open-air-feature-copy {
+  padding-top: 0.5rem;
+}
+
+.open-air-feature-copy h3,
+.open-air-media-copy h3 {
+  font-size: 1.6rem;
+}
+
+.open-air-feature-copy .eyebrow {
+  margin-bottom: 0.7rem;
+}
+
+.open-air-result-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+}
+
 .case-study-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -545,7 +689,7 @@ h3 {
   overflow: hidden;
   background-image:
     linear-gradient(rgba(78, 59, 42, 0.18), rgba(78, 59, 42, 0.18)),
-    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80');
+    url('Web Design/Nuruslums_3.png');
   background-size: cover;
   background-position: center;
   margin-bottom: 2.5rem;
@@ -843,7 +987,10 @@ ul {
   .project-facts,
   .case-intro,
   .problem-solution-wrapper,
-  .process-grid {
+  .process-grid,
+  .open-air-results,
+  .open-air-feature-card,
+  .open-air-result-grid {
     grid-template-columns: 1fr;
   }
 
@@ -907,5 +1054,10 @@ ul {
 
   .process-card img {
     height: 210px;
+  }
+
+  .poster-format,
+  .flyer-format {
+    min-height: auto;
   }
 }
