@@ -25,7 +25,7 @@
             z-index: 1000; 
             padding: 1rem; } 
         
-        .nav-container { max-width: 1180px; 
+        .nav-container { max-width: 1400px; 
             margin: 0 auto; 
             display: flex; 
             justify-content: space-between; 
@@ -73,22 +73,22 @@
                 transition: transform 0.2s ease, box-shadow 0.2s ease; } 
         .lang-toggle:hover { transform: translateY(-1px); 
                 box-shadow: var(--shadow); } 
-        .hero { min-height: 92vh; 
+        .hero { min-height: auto; 
             display: flex; 
-            align-items: center; 
-            padding: 2rem 1.25rem 2rem; } 
-        .hero-inner, .section, .project-page { max-width: 1180px; 
+            align-items: flex-start; 
+            padding: 5rem 1.25rem 10rem; }
+        .hero-inner, .section, .project-page { max-width: 1400px; 
             margin: 0 auto; width: 100%; } 
         .eyebrow { text-transform: uppercase; 
             letter-spacing: 0.2em; 
             color: var(--brown); 
             font-size: 0.75rem; 
-            margin-bottom: 1rem; } 
+            margin-bottom: 0.5rem; }
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; 
             color: var(--dark-brown); margin-top: 0; } 
         h1 { font-size: clamp(3.6rem, 9vw, 6.5rem);
             line-height: 0.95; 
-            margin-bottom: 1.5rem; 
+            margin-bottom: 0.8rem; 
             animation: titleRise 0.9s ease both; 
         } h1 span { color: var(--brown); 
             display: inline-block; 
@@ -107,9 +107,10 @@
             margin-bottom: 0.7rem; } 
         .hero-text, .section-heading p, .project-content p, .contact-box p, .project-page p, .about-grid p, .timeline-content p { color: #645A52; max-width: 780px; } 
         .hero-actions { display: flex; 
-            gap: 1rem; 
+            gap: 0.75rem; 
             flex-wrap: wrap; 
-            margin-top: 2rem; } 
+            margin-top: 0.5rem; 
+            margin-bottom: 0; }
         .btn { display: inline-flex; 
             align-items: center; 
             justify-content: center; 
@@ -445,7 +446,7 @@
             .open-air-result-grid { display: grid; 
                 grid-template-rows: 1fr 1fr; 
                 gap: 1.5rem; } 
-            .case-study-page { max-width: 1200px;
+            .case-study-page { max-width: 1400px;
                 margin: 0 auto; 
                 padding: 2rem 1.25rem 5rem; } 
             .case-hero { position: relative; 
@@ -558,7 +559,7 @@
                 object-fit: cover; 
                 max-height: 620px; } 
             .reflection-section { margin-top: 2rem; } 
-            .gallery-page { max-width: 1200px; 
+            .gallery-page { max-width: 1400px; 
                 margin: auto; 
                 padding: 3rem 1.5rem; } 
             .gallery-header { text-align: center; margin-bottom: 3rem; } 
@@ -624,7 +625,7 @@
             .poster-format, .flyer-format { min-height: auto; } } 
             
             /* ========================================== PROJEKT 6 – PRAKTIKUM Ergänzung für project6.html ========================================== */ 
-            .internship-page { max-width: 1200px; 
+            .internship-page { max-width: 1400px; 
                 margin: 0 auto; 
                 padding: 2rem 1.25rem 6rem; } /* Hero */ 
             .internship-hero { display: grid; 
