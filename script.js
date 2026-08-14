@@ -90,37 +90,31 @@ if (!prefersReducedMotion && hasFinePointer) {
   });
 }
 
-const common = {
-  de: {
-    "nav.backProjects": "Zurück zu Arbeiten",
-    "common.more": "Mehr erfahren →",
-    "common.moreView": "Mehr ansehen →",
-    "next.project": "Nächstes Projekt ansehen",
-    "next.other": "Andere Arbeit ansehen",
-    "next.continue": "Weiter",
-    "next.overview": "Alle Projekte ansehen",
-  },
-  en: {
-    "nav.backProjects": "Back to work",
-    "common.more": "Learn more →",
-    "common.moreView": "View more →",
-    "next.project": "View next project",
-    "next.other": "View another project",
-    "next.continue": "Next",
-    "next.overview": "View all projects",
-  },
-};
-
-const translations = {
-// in arbeit
-};
+// Use external translations provided by `locales.js` (window.TRANSLATIONS)
+const TRANSLATIONS = window.TRANSLATIONS || { common: { de: {}, en: {} }, translations: {} };
+const common = TRANSLATIONS.common || { de: {}, en: {} };
+const translations = TRANSLATIONS.translations || {};
 
 const pageKey = document.body.dataset.page;
 const toggleButton = document.querySelector("[data-language-toggle]");
 
+// Cache original (German) texts/alt attributes so we can restore them
+const originalText = {};
+const originalAlt = {};
+document.querySelectorAll("[data-i18n]").forEach((el) => {
+  const key = el.dataset.i18n;
+  originalText[key] = el.textContent;
+});
+document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+  const key = el.dataset.i18nAlt;
+  originalAlt[key] = el.getAttribute("alt");
+});
+
 function getDictionary(lang) {
-  const pageTranslations = translations[pageKey];
-  if (!pageTranslations || !pageTranslations[lang]) return null;
+  const pageTranslations = translations[pageKey] || {};
+  // For German, use the site's existing texts (don't override), but include commons
+  if (lang === "de") return { ...common.de };
+  if (!pageTranslations[lang]) return null;
   return { ...common[lang], ...pageTranslations[lang] };
 }
 
@@ -135,6 +129,8 @@ function applyLanguage(lang) {
     const key = element.dataset.i18n;
     if (Object.prototype.hasOwnProperty.call(dict, key)) {
       element.textContent = dict[key];
+    } else if (lang === "de" && Object.prototype.hasOwnProperty.call(originalText, key)) {
+      element.textContent = originalText[key];
     }
   });
 
@@ -142,6 +138,8 @@ function applyLanguage(lang) {
     const key = element.dataset.i18nAlt;
     if (Object.prototype.hasOwnProperty.call(dict, key)) {
       element.setAttribute("alt", dict[key]);
+    } else if (lang === "de" && Object.prototype.hasOwnProperty.call(originalAlt, key)) {
+      element.setAttribute("alt", originalAlt[key]);
     }
   });
 
