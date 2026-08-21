@@ -361,6 +361,7 @@
                 border: 1px solid rgba(78, 59, 42, 0.10); 
                 border-radius: 2rem; 
                 padding: 2rem; } 
+            .project-section-card p { max-width: 100%; }
             .project-section-card h2, .project-text-block h2 { margin-bottom: 0.8rem; } 
             .project-text-block { margin-top: 2rem; } 
             .project-phase-grid { display: grid; 
@@ -624,7 +625,6 @@
             .process-card img { height: 210px; } 
             .poster-format, .flyer-format { min-height: auto; } } 
             
-            /* ========================================== PROJEKT 6 – PRAKTIKUM Ergänzung für project6.html ========================================== */ 
             .internship-page { max-width: 1400px; 
                 margin: 0 auto; 
                 padding: 2rem 1.25rem 6rem; } /* Hero */ 
@@ -663,7 +663,7 @@
                 font-size: 0.75rem; 
                 letter-spacing: 0.12em; 
                 text-transform: uppercase; } 
-            .internship-meta-item strong { color: var(--dark-brown); } 
+            .internship-meta-item strong { color: var(--brown); }
             .internship-hero-visual { position: relative; } 
             .internship-main-image { width: 100%; 
                 height: 100%; 
@@ -691,7 +691,7 @@
                 font-size: 0.75rem; 
                 text-transform: uppercase; 
                 letter-spacing: 0.12em; } 
-            .internship-floating-card strong { color: var(--dark-brown); } 
+            .internship-floating-card strong { color: var(--brown); } 
             
             /* Allgemeine Abschnitte */ 
             .internship-section { margin-bottom: 6rem; } 
@@ -702,9 +702,9 @@
             .internship-intro-copy h2 { max-width: 720px; } 
             .internship-intro-copy p { max-width: 760px; color: #645A52; } 
             .internship-tools-card { padding: 2rem; 
-                background: var(--dark-brown); 
-                border-radius: 2rem; } 
-            .internship-tools-card h3 { color: var(--bg); margin-bottom: 1.5rem; } 
+                    background: var(--brown); 
+                    border-radius: 2rem; } 
+                .internship-tools-card h3 { color: var(--white); margin-bottom: 1.5rem; } 
             .internship-tool-list { display: flex; 
                 flex-wrap: wrap; 
                 gap: 0.75rem; } 
@@ -733,6 +733,11 @@
                 padding: 3.5rem; } 
             .internship-feature-copy h3 { font-size: clamp(2rem, 4vw, 3rem); } 
             .internship-feature-copy p { color: #645A52; } 
+
+            /* Reflexion box: use lighter brown background to match tools card */
+            .internship-reflection { display: grid; gap: 1rem; background: var(--brown); border-radius: 1.5rem; padding: 2rem; }
+            .internship-reflection h2 { color: var(--white); margin: 0 0 0.5rem; }
+            .internship-reflection p { color: rgba(255,255,255,0.95); }
 
             /* Aufgaben */ 
             .internship-task-grid { display: grid; 
@@ -814,11 +819,11 @@
                 grid-template-columns: 0.8fr 1.2fr; 
                 gap: 3rem; 
                 padding: 3rem; 
-                background: var(--dark-brown); 
+                background: var(--brown); 
                 border-radius: 2rem; } 
-            .internship-reflection h2 { color: var(--bg); } 
-            .internship-reflection p { color: rgba(245, 241, 233, 0.82); } 
-            .internship-reflection .eyebrow { color: #CDBCA8; } 
+            .internship-reflection h2 { color: var(--white); } 
+            .internship-reflection p { color: rgba(255,255,255,0.95); } 
+            .internship-reflection .eyebrow { color: rgba(255,255,255,0.9); } 
             
             /* Responsive */ 
             @media (max-width: 1050px) { 
