@@ -355,7 +355,7 @@
         </figure>
 
         <figure class="internship-gallery-item">
-          <img src="Praktikum/social-post.jpg" alt="Social-Media-Post" data-i18n-alt="gallery.alt2">
+          <img src="babysleepdocters/SoMe_Gestaltung.png" alt="Social-Media-Post" data-i18n-alt="gallery.alt2">
           <figcaption data-i18n="gallery.caption2">
             Social-Media-Gestaltung
           </figcaption>
@@ -369,7 +369,19 @@
         </figure>
 
         <figure class="internship-gallery-item">
-          <img src="Praktikum/webinar-timer.jpg" alt="Animierter Webinar-Timer" data-i18n-alt="gallery.alt4">
+          <video
+            src="babysleepdocters/Amimation_BabySleep.webm"
+            type="video/webm"
+            alt="Animierter Webinar-Timer"
+            data-i18n-alt="gallery.alt4"
+            muted
+            loop
+            playsinline
+            controls
+            preload="metadata"
+            poster="babysleepdocters/logo - square.png"
+            aria-label="Animierter Webinar-Timer"
+          ></video>
           <figcaption data-i18n="gallery.caption4">
             Webinar-Timer
           </figcaption>
@@ -377,7 +389,7 @@
 
 
         <figure class="internship-gallery-item internship-gallery-wide">
-          <img src="Praktikum/content-plan.jpg" alt="Planung von Social-Media-Inhalten" data-i18n-alt="gallery.alt5">
+          <img src="babysleepdocters/Analyse.png" alt="Planung von Social-Media-Inhalten" data-i18n-alt="gallery.alt5">
           <figcaption data-i18n="gallery.caption5">
             Analyse und Content-Planung
           </figcaption>
@@ -428,6 +440,44 @@
     if (localStorage.getItem("loggedIn") !== "true") {
       window.location.href = "login.html";
     }
+
+    document.querySelectorAll('.internship-gallery-item video').forEach((video) => {
+      const playOnView = () => {
+        const rect = video.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (isVisible && video.readyState >= 2) {
+          video.play().catch(() => {});
+        } else if (!isVisible) {
+          video.pause();
+        }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }, {
+        threshold: [0, 0.2, 0.5, 1],
+        rootMargin: '0px 0px -10% 0px'
+      });
+
+      observer.observe(video);
+      window.addEventListener('scroll', playOnView, { passive: true });
+      window.addEventListener('resize', playOnView);
+
+      video.addEventListener('error', () => {
+        const figure = video.closest('.internship-gallery-item');
+        if (figure) {
+          figure.classList.add('video-fallback');
+        }
+        video.style.display = 'none';
+      });
+    });
   </script>
 
   <script src="locales.js"></script>

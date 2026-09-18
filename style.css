@@ -795,13 +795,19 @@
             .internship-gallery-item { position: relative; 
                 margin: 0; 
                 overflow: hidden; 
-                border-radius: 1.5rem; } 
-            .internship-gallery-item img { width: 100%; 
+                border-radius: 1.5rem; 
+                background: #f2ede7; } 
+            .internship-gallery-item.video-fallback {
+                background: linear-gradient(135deg, rgba(72, 58, 46, 0.30), rgba(72, 58, 46, 0.10)), url('babysleepdocters/logo - square.png') center/cover no-repeat; 
+            }
+            .internship-gallery-item img,
+            .internship-gallery-item video { width: 100%; 
                 height: 100%; 
                 display: block; 
-                object-fit: cover; 
+                object-fit: contain; 
                 transition: transform 0.45s ease; } 
-            .internship-gallery-item:hover img { transform: scale(1.04); } 
+            .internship-gallery-item:hover img,
+            .internship-gallery-item:hover video { transform: scale(1.04); } 
             .internship-gallery-item figcaption { position: absolute; 
                 left: 1rem;
                 right: 1rem; 
